@@ -42,7 +42,7 @@ a { color: var(--blue); }
 .btn:hover { background: rgba(255, 255, 255, .22); }
 
 /* ---------- 本文 ---------- */
-main { max-width: 860px; margin: 0 auto; padding: 1rem 1.25rem 4rem; }
+main { max-width: 1040px; margin: 0 auto; padding: 1rem 1.25rem 4rem; }
 h2 {
   color: var(--green);
   font-size: 1.45rem;
@@ -54,7 +54,7 @@ h3 { color: var(--blue); font-size: 1.1rem; margin: 1.6rem 0 .4rem; }
 ul, ol { padding-left: 1.4rem; }
 li { margin: .35rem 0; }
 .note { color: var(--muted); font-size: .9rem; margin: 0 0 .5rem; }
-.me { font-weight: 700; }
+.me { font-weight: 700; text-decoration: underline; text-underline-offset: .2em; }
 .venue { font-style: italic; }
 .date { color: var(--muted); font-variant-numeric: tabular-nums; margin-right: .5rem; }
 
@@ -63,6 +63,20 @@ table { width: 100%; border-collapse: collapse; font-size: .95rem; }
 th, td { border: 1px solid var(--border); padding: .5rem .75rem; text-align: left; vertical-align: top; }
 th { background: var(--soft); white-space: nowrap; }
 td.nowrap { white-space: nowrap; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+
+/* 教育歴: 期間を2行に分け、機関名と講座内容の幅を確保する */
+.education-table { table-layout: fixed; min-width: 760px; line-height: 1.65; }
+.education-table .period-col { width: 20%; }
+.education-table .institution-col { width: 24%; }
+.education-table .description-col { width: 48%; }
+.education-table .role-col { width: 8%; }
+.education-table th, .education-table td { padding: .85rem .8rem; }
+.education-table td { line-break: strict; overflow-wrap: break-word; }
+.period { color: var(--muted); font-variant-numeric: tabular-nums; }
+.period span { display: block; white-space: nowrap; }
+.education-table th:last-child, .education-table td:last-child { text-align: center; white-space: nowrap; }
+.course-detail { color: var(--muted); font-size: .9em; }
 
 .links a { margin-right: .4rem; }
 
